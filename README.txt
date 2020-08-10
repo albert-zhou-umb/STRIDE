@@ -58,6 +58,7 @@ annotated.<fasta_file>.txt (contains annotations for each sequence):
 	* Any Sequences with HMM Whole Sequence Scores below 75 are often poor matches either due to divergence or pseudogene * 
 	* Sequences that do not meet basic criteria are not annotated *
 
+
 ----- CONCLUDING REMARKS -----
 If you use STRIDE in your work, please cite us at: Zhou et al., Bioinformatics 2020.
 Email us if you encounter any problems, have questions, or want to leave a comment!
