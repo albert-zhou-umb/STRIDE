@@ -12,8 +12,7 @@ Created Using: HMMERv3.3 & Perlv5.24.0
 4. A directory where the merged and individual HMM profiles are located (Final_Profiles)
 5. A directory with sets of FASTA files with which to test STRIDE (Test_Sequences)
 6. When "stride.sh" is executed, two files are stored in the "results" directory (results)
-	-One file 
-  be a sorted, reorganized version of the raw file containing scores from the merged HMM profile (stride_raw.<fasta_file>.txt) 
+	-One file will be a sorted, reorganized version of the raw file containing scores from the merged HMM profile (stride_raw.<fasta_file>.txt) 
 	-The second file will contain the annotations for each sequence (annotated.<fasta_file>.txt)
 
 
