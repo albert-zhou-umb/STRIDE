@@ -1,9 +1,9 @@
-# STRIDE (STevor RIfin iDEntifier)
-Overview: STRIDE is an HMM-based, command-line program that automates the identification and classification of RIFIN and STEVOR protein sequences.
+Title: STRIDE (STevor RIfin iDEntifier)
 Primary Author: Albert Zhou, albert.zhou@som.umaryland.edu
 Contact: Mark Travassos, mtravass@som.umaryland.edu
-Date Last Modified: August 8, 2020
+Date Last Modified: December 21, 2020
 Created Using: HMMERv3.3 & Perlv5.24.0
+Overview: STRIDE is an HMM-based, command-line program that automates the identification and classification of RIFIN and STEVOR protein sequences.
 
 ----- After unzipping the tarball file for STRIDE, the parent directory should contain 6 items -----
 1. This README file
@@ -17,13 +17,13 @@ Created Using: HMMERv3.3 & Perlv5.24.0
 
 
 ----- TO INSTALL HMMERv3.3 DEPENDENCIES -----
-wget http://eddylab.org/software/hmmer/hmmer.tar.gz
-tar zxf hmmer.tar.gz
-cd hmmer-3.3.1
-./configure
-make
-make check
-make install
+	wget http://eddylab.org/software/hmmer/hmmer.tar.gz
+	tar zxf hmmer.tar.gz
+	cd hmmer-3.3.1
+	./configure
+	make
+	make check
+	make install
 
 
 ----- TO EXECUTE -----
@@ -40,6 +40,7 @@ Default values are: RIFIN threshold = 200; RIFIN-A threshold = 250; RIFIN-B thre
 Feel free to play around with these options to increase/decrease sensitivity & specificity.
 	perl stride_ann.pl -input stride_raw.<fasta_file>.txt -output outputfile -Rifin threshold_score (optional) -RifinA threshold_score (optional) -RifinB threshold_score (optional) -Stevor threshold_score (optional)
 
+Typing "./stride -h" will bring up this README.
 
 ----- TO ANALYZE -----
 stride_raw.<fasta_file>.txt (sorted, reorganized raw file):
@@ -59,8 +60,5 @@ annotated.<fasta_file>.txt (contains annotations for each sequence):
 
 
 ----- CONCLUDING REMARKS -----
-If you use STRIDE in your work, please cite us at: Zhou et al., Bioinformatics 2020.
+If you use STRIDE in your work, please cite us at: Zhou et al., Briefings in Bioinformatics 2020.
 Email us if you encounter any problems, have questions, or want to leave a comment!
-
-
-
