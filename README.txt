@@ -1,7 +1,7 @@
 Title: STRIDE (STevor RIfin iDEntifier)
 Primary Author: Albert Zhou, albert.zhou@som.umaryland.edu
 Contact: Mark Travassos, mtravass@som.umaryland.edu
-Date Last Modified: December 21, 2020
+Date Last Modified: December 22, 2020
 Created Using: HMMERv3.3 & Perlv5.24.0
 Overview: STRIDE is an HMM-based, command-line program that automates the identification and classification of RIFIN and STEVOR protein sequences.
 
@@ -40,7 +40,7 @@ Default values are: RIFIN threshold = 200; RIFIN-A threshold = 250; RIFIN-B thre
 Feel free to play around with these options to increase/decrease sensitivity & specificity.
 	perl stride_ann.pl -input stride_raw.<fasta_file>.txt -output outputfile -Rifin threshold_score (optional) -RifinA threshold_score (optional) -RifinB threshold_score (optional) -Stevor threshold_score (optional)
 
-Typing "./stride -h" will bring up this README.
+Typing "./stride.sh -h" or "./stride.sh -help" will bring up this README.
 
 ----- TO ANALYZE -----
 stride_raw.<fasta_file>.txt (sorted, reorganized raw file):
