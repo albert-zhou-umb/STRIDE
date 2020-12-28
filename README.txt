@@ -1,7 +1,7 @@
 Title: STRIDE (STevor RIfin iDEntifier)
 Primary Author: Albert Zhou, albert.zhou@som.umaryland.edu
 Contact: Mark Travassos, mtravass@som.umaryland.edu
-Date Last Modified: December 22, 2020
+Date Last Modified: December 28, 2020
 Created Using: HMMERv3.3 & Perlv5.24.0
 Overview: STRIDE is an HMM-based, command-line program that automates the identification and classification of RIFIN and STEVOR protein sequences.
 
@@ -27,10 +27,12 @@ Overview: STRIDE is an HMM-based, command-line program that automates the identi
 
 
 ----- TO EXECUTE -----
-While in the main directory (`pwd` */STRIDE), type the following command and the path to the file containing your protein (AMINO ACID) sequences in FASTA format:
+While in the main directory (`pwd` */STRIDE), type the following command and the path to the file containing your protein (AMINO ACID) sequences in FASTA format. FASTA files begin with a '>' that gives a name/identifier for the sequence, followed by standard IUB/IUPAC amino acid codes. Hyphens/dashes "-" can represent gaps and asterisks "*" may represent stop codons or wildcards. Avoid other unsupported characters as it may return errors.
+	
 	./stride.sh <path/fasta_file>
 
 The main script "stride.sh" conducts the search of the FASTA file against the HMM profile and sorts (by sequence ID) & reorganizes the raw output. These results will be placed in the "results" directory:
+	
 	1) stride_raw.<fasta_file>.txt
 	2) annotated.<fasta_file>.txt
 
@@ -38,9 +40,11 @@ The secondary script "stride_ann.pl" automates annotations and is executed autom
 However, this script can also be run independently on the "stride_raw.<fasta_file>.txt" file with different thresholds. 
 Default values are: RIFIN threshold = 200; RIFIN-A threshold = 250; RIFIN-B threshold = 250; STEVOR threshold = 145. 
 Feel free to play around with these options to increase/decrease sensitivity & specificity.
+
 	perl stride_ann.pl -input stride_raw.<fasta_file>.txt -output outputfile -Rifin threshold_score (optional) -RifinA threshold_score (optional) -RifinB threshold_score (optional) -Stevor threshold_score (optional)
 
-Typing "./stride.sh -h" or "./stride.sh -help" will bring up this README.
+
+"./stride -h" or "./stride -help" will bring up this README.
 
 ----- TO ANALYZE -----
 stride_raw.<fasta_file>.txt (sorted, reorganized raw file):
@@ -60,5 +64,5 @@ annotated.<fasta_file>.txt (contains annotations for each sequence):
 
 
 ----- CONCLUDING REMARKS -----
-If you use STRIDE in your work, please cite us at: Zhou et al., Briefings in Bioinformatics 2020.
+If you use STRIDE in your work, please cite us. 
 Email us if you encounter any problems, have questions, or want to leave a comment!
