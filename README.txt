@@ -1,7 +1,7 @@
 Title: STRIDE (STevor RIfin iDEntifier)
 Primary Author: Albert Zhou, albert.zhou@som.umaryland.edu
 Contact: Mark Travassos, mtravass@som.umaryland.edu
-Date Last Modified: December 28, 2020
+Date Last Modified: February 17, 2021
 Created Using: HMMERv3.3 & Perlv5.24.0
 Overview: STRIDE is an HMM-based, command-line program that automates the identification and classification of RIFIN and STEVOR protein sequences.
 
